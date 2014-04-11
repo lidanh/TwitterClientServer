@@ -1,0 +1,15 @@
+# Mac specific stuff
+.DS_Store
+
+# Compiled Object files and build directory
+*.class
+build/*
+
+# Ignore any executables
+bin/
+
+#log file
+*.log
+*.log.*
+*.html
+/bin

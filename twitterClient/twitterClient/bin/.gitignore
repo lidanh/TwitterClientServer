@@ -1,0 +1,6 @@
+# This is here only so we can commit an empty directory to git.
+# It is used to build the project
+
+*
+
+!.gitignore

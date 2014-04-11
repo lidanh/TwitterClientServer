@@ -1,0 +1,30 @@
+# Mac specific stuff
+.DS_Store
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+
+# Ignore the build dir
+build/*
+lib/*
+
+# Ignore any executables
+bin/*
+
+# XCode related ignores
+UserInterfaceState.xcuserstate
+*.pbxuser
+*.perspectivev3
+*.mode1v3
+xcuserdata/

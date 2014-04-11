@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE project>
+<project name="TwitterReactorServer" basedir="." default="main">
+	<property name="mainclass.name" value="spl.twitter.reactor.TwitterReactor" description="Target class name" />
+	<import file="../build-common.xml" />
+
+	<target name="run" depends="jar">
+		<java fork="true" classname="${mainclass.name}">
+			<classpath>
+				<path refid="classpath" />
+				<path refid="application" />
+			</classpath>
+			<arg value="${arg0}" />
+			<arg value="${arg1}" />
+		</java>
+	</target>
+
+</project>

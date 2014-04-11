@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE project>
+<project name="build-common" default="main">
+    <import file="dependencies.xml" />
+    
+    <property name="src.dir" value="src" description="Source code directory" />
+    <property name="build.dir" value="build" description="Build directory" />
+    <property name="classes.dir" value="${build.dir}/classes" description="*.class files directory" />
+    <property name="jar.dir" value="${build.dir}/jar" description="Jar file directory" />
+    <property name="lib.dir" value="lib" description="External libraries directory" />
+    <property name="depend.dir" value="${build.dir}/dependencies" description="Internal libraries directory (Shared)" />
+    <path id="classpath" description="External JAR files path">
+        <fileset dir="${lib.dir}" includes="**/*.jar" />
+        <fileset dir="${depend.dir}" includes="**/*.jar" />
+    </path>
+    <path id="application" location="${jar.dir}/${ant.project.name}.jar" description="Application final JAR file" />
+
+    <target name="clean">
+        <delete dir="${build.dir}" />
+        <delete dir="bin" />
+        <delete>
+            <fileset dir="." includes="*.log" />
+        </delete>
+    </target>
+    
+    <target name="dependencies">
+        <mkdir dir="${depend.dir}" />
+        <antcall target="depend.twitterEngine"/>
+    </target>
+
+    <target name="compile" depends="dependencies">
+        <mkdir dir="${classes.dir}" />
+        <copy file="${src.dir}/log4j2.xml" todir="${classes.dir}" description="Copy Log4j configuration file from the source dir to the classpath" />
+        <javac srcdir="${src.dir}" destdir="${classes.dir}" classpathref="classpath" includeantruntime="false" />
+    </target>
+
+    <target name="jar" depends="compile">
+        <mkdir dir="${jar.dir}" />
+        <jar destfile="${jar.dir}/${ant.project.name}.jar" basedir="${classes.dir}">
+            <manifest>
+                <attribute name="Main-Class" value="${mainclass.name}" />
+            </manifest>
+        </jar>
+    </target>
+
+    <target name="main" depends="clean,run" />
+</project>

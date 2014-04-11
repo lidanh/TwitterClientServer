@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE project>
+<project name="TwitterThreadPerClientServer" basedir="." default="main">
+	<property name="mainclass.name" value="spl.twitter.server.TwitterServer" description="Target class name" />
+	<import file="../build-common.xml" />
+
+	<target name="run" depends="jar">
+		<java fork="true" classname="${mainclass.name}">
+			<classpath>
+				<path refid="classpath" />
+				<path refid="application" />
+			</classpath>
+			<arg value="${arg0}" />
+		</java>
+	</target>
+</project>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+  <Appenders>
+    <Console name="Console" target="SYSTEM_OUT">
+      <ThresholdFilter level="trace" />
+      <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] - %msg%n"/>
+    </Console>
+    <File name="File" fileName="log.html" append="false">
+      <ThresholdFilter level="error" />
+      <!-- <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] - %msg%n"/> -->
+      <HTMLLayout charset="UTF-8" title="Twitter Reactor Server logfile" />
+    </File>
+  </Appenders>
+  <Loggers>
+    <Root level="trace">
+      <AppenderRef ref="Console" />
+      <AppenderRef ref="File"/>
+    </Root>
+  </Loggers>
+</Configuration>

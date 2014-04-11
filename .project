@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>Assignment4</name>
+	<comment></comment>
+	<projects>
+		<project>twitterEngine</project>
+		<project>twitterReactorServer</project>
+		<project>twitterThreadPerClientServer</project>
+	</projects>
+	<buildSpec>
+	</buildSpec>
+	<natures>
+	</natures>
+</projectDescription>

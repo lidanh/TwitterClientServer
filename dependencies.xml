@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE project>
+<project name="dependencies" basedir="." default="depend.twitterEngine">
+	<dirname property="dependencies.basedir" file="${ant.file.dependencies}" />
+	<property name="dependencies.twitterEngine.src" value="${dependencies.basedir}/twitterEngine/src" />
+
+	<path id="classpath" description="External JAR files path">
+		<fileset dir="${lib.dir}" includes="**/*.jar" />
+	</path>
+
+	<target name="depend.twitterEngine">
+		<!-- Compile -->
+		<mkdir dir="${classes.dir}" />
+		<javac srcdir="${dependencies.twitterEngine.src}" destdir="${classes.dir}" classpathref="classpath" includeantruntime="false" />
+
+		<!-- Jar -->
+		<mkdir dir="${jar.dir}" />
+		<jar destfile="${depend.dir}/twitterEngine.jar" basedir="${classes.dir}"></jar>
+	</target>
+</project>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+  <Appenders>
+    <Console name="Console" target="SYSTEM_OUT">
+      <ThresholdFilter level="trace" />
+      <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] - %msg%n"/>
+    </Console>
+    <File name="File" fileName="/users/studs/bsc/2014/lidanh/.html/twitter.txt" append="false">
+      <ThresholdFilter level="trace" />
+      <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] - %msg%n"/>
+    </File>
+  </Appenders>
+  <Loggers>
+    <Root level="trace">
+      <AppenderRef ref="Console" />
+      <AppenderRef ref="File"/>
+    </Root>
+  </Loggers>
+</Configuration>
