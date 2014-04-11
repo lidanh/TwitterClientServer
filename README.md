@@ -11,7 +11,7 @@ The project is a terminal-twitter clone (client+server) with **STOMP protocol**,
 **The client** was implemented in **C++**, with ***boost*** library for multithreading. Fully compatible with ***Active MQ*** (Same STOMP Frames). 
 The client creates a responsive HTML output file for user's feed, built with ***twitter bootstrap***. [for example](http://www.cs.bgu.ac.il/~lidanh/lidan.html):
 
-[![image](https://dl.dropboxusercontent.com/u/4041100/github/twitter_client)](http://www.cs.bgu.ac.il/~lidanh/lidan.html)
+[![image](https://dl.dropboxusercontent.com/u/4041100/github/twitter_client.jpg)](http://www.cs.bgu.ac.il/~lidanh/lidan.html)
 
 
 ## Project Structure
