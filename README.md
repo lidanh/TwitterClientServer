@@ -23,7 +23,7 @@ The project has 4 sub-projects:
 * Thread-per-Client
 * Reactor Server
 
-The *Reactor server* and the *Thread-per-client server* uses the twitter engine project. The twitter client is independent, and most of its features can work even with with ActiveMQ server.
+The *Reactor server* and the *Thread-per-client server* uses the twitter engine project. The twitter client is independent, and most of its features can work even with ActiveMQ server.
 
 
 ![image](https://dl.dropboxusercontent.com/u/4041100/github/twitter_tech.jpg)
