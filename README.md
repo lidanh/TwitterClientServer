@@ -2,7 +2,7 @@
 
 ![image](https://dl.dropboxusercontent.com/u/4041100/github/twitter.jpg)
 
-This project was an assignment for **systems programming course**, Ben Gurion University, December 2013. You can read the assignment requirements [here](http://www.cs.bgu.ac.il/~spl141/wiki.files/assignment4_ver2.pdf). I got 120/100 in this assignment (Reactor server was a bonus part).
+This project was an assignment for **systems programming course**, Ben Gurion University, December 2013. You can read the assignment requirements [here](http://www.cs.bgu.ac.il/~spl141/wiki.files/assignment4_ver2.pdf). I got 120/100 for this assignment (Reactor server was a bonus part).
 
 The project is a terminal-twitter clone (client+server) with **STOMP protocol**, including login, public twitting, follow and @tagging.
 
